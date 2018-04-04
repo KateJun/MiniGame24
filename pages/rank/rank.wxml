@@ -1,0 +1,50 @@
+<!--pages/rank/rank.wxml-->
+<include src="../index/bg.wxml"/>
+<radio-group bindchange="tabClick" class="radio-group">
+  <view class="flex_box">
+    <view class="flex_item">
+      <label class="{{currentPage == item.id?'active':''}}" wx:for="{{channel}}" wx:key="key">
+        {{item.name }}
+        <radio value="{{item.id}}" hidden="true" checked="{{item.checked}}"></radio>
+      </label>
+    </view>
+  </view>
+</radio-group>
+<!-- 列表头部 -->
+<view class='list_item_title' hidden='{{ listArr.length<=0}}'>
+  <image  class ='list_item_title_flag' src='../../images/flag.png' mode='aspectFit' /> 
+  <text class='list_text_title_start'>大神排行榜（挑战模式）：</text>
+  <!-- <text class='list_text' hidden='{{true}}'>玩家</text> -->
+  <text class='list_text_title_end'>算力</text>
+</view>
+<!-- 是否显示空页面 -->
+<block wx:if="{{currentPage == 'r2' || listArr.length<=0}}">
+  <include src="empty.wxml" />
+</block>
+<!-- 列表展开 -->
+<import src="rank_item.wxml" />
+<import src="rank_item_pk.wxml" />
+<view class='list_container'>
+<scroll-view scroll-y="{{true}}"  class='scroll-v' hidden="{{listArr.length<=0}}">
+  <block wx:for="{{listArr}}" >
+    <template is="{{currentPage == 'r0'?'rankItem':'rankItemPK'}}" data="{{...item}}" />
+  </block>
+</scroll-view>
+</view>
+<!-- 底部分享按钮 -->
+<block wx:if="{{currentPage == 'r1' && listArr.length>0}}">
+  <view class="bottom_box">
+    <!-- <button bindtap='clickBtn'>不服再次测评</button> -->
+    <button open-type='share' class='share_btn_tran'></button> 
+
+    <image src='../../images/button_test_agains.png' class='bottom_box_btn2_l' mode='aspectFit' bindtap='clickBtn' id='again'></image>
+    <image src='../../images/button_share_image.png' class='bottom_box_btn2_r' mode='aspectFit'   open-type='share'></image>
+  </view>
+</block>
+<!-- 底部个人算力 -->
+<block wx:if="{{currentPage == 'r0' && listArr.length>0}}">
+  <view class="bottom_box">
+  <!-- 再次评测 -->
+    <image src='../../images/button_test_again.png' id='again' class='bottom_box_btn' mode='aspectFit' bindtap='clickBtn'></image>
+  </view>
+</block>

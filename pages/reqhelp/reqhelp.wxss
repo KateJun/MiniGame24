@@ -1,0 +1,104 @@
+/* pages/reqhelp/reqhelp.wxss */
+
+.title-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.title-box-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.title-box-text-name {
+  font-size: 26rpx;
+  color: #3e4a53;
+  margin-bottom: 20rpx;
+}
+
+.title-box-text-game {
+  font-size: 36rpx;
+  color: #3e4a53;
+  font-weight: bold;
+}
+
+.userhead {
+  align-items: center;
+  display: flex;
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx 0;
+  border-radius: 50%;
+  border: 2rpx solid white;
+}
+
+.playing {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.skip {
+  color: #3e4a53;
+  font-size: 26rpx;
+  justify-content: center;
+  text-align: center;
+  margin: 0 0 20rpx 0;
+}
+
+.win {
+  color: #3e4a53;
+  font-size: 48rpx;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  margin: 0 0 20rpx 0;
+}
+
+.result-box {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.result-exp {
+  width: 80%;
+  border: 1rpx solid gray;
+  height: 100rpx;
+  justify-content: center;
+  border-radius: 10rpx;
+  display: block;
+  font-size: 48rpx;
+  color: #3e4a53;
+  background: white;
+  padding-left: 30rpx;
+  line-height: 100rpx;
+  overflow: scroll;
+  margin: 0 20rpx;
+}
+
+.result-ac {
+  width: 20%;
+  height: 102rpx;
+  color: white;
+  margin: 0 20rpx 0 0;
+}
+ 
+.page-bottom {
+  margin-top: 50rpx;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.bottom_box_btn {
+  width: 600rpx;
+  height: 100rpx;
+}

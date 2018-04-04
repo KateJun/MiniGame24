@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<include src="bg.wxml"/>
+<view class="container" style='position:fixed'>
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userhead" src="{{userInfo.avatarUrl}}" ></image>
+    <view class="welcome">{{userInfo.nickName}}</view>
+    <view style="text-align:center" hidden='true' wx:if="{{lastScore>0}}">您上次玩的算力是{{lastScore}}</view>
+    <image src='../../images/score_logo_top.png' class='logo' mode='aspectFit'></image>
+  </view>
+  <view class="specification-box">
+    <block wx:for="{{gradeArr}}" wx:key="key">
+      <!-- <button class="page-btn" value="{{item.value}}" id="{{item.name}}" bindtap="gotoCount">{{item.value}}</button> -->
+      <image src='{{item.value}}' class='image-btn' mode='aspectFit' value="{{item.value}}" id="{{item.name}}" bindtap="gotoCount"></image>
+    </block>
+  </view>
+  <text class="specification-title">玩法说明：</text>
+  <view style='width:100%'>
+    <text class="specification">{{specification}}</text>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<include src="../index/bg.wxml" />
+<!-- <view class="congratulation">
+    恭喜{{userInfo.nickName}}通关24点数学巧算游戏
+  </view> -->
+<view class="congratulation">
+  TIME IS UP
+</view>
+<view class="score-box">
+  您的最终算力评分
+</view>
+<view class="total">{{totalscore}}</view>
+<view class="total-ti">总答题数{{num}}题</view>
+<view class='total-end'>结论：你的算力堪比</view>
+<!-- <view class='total-end'>{{curDis.desc}}</view> -->
+<canvas canvas-id='canvasID' class='canvas'></canvas>
+<view class="total-tips">{{curDis.dis}}</view>
+<view class="bottom_box">
+  <!-- <button class="page-btn" open-type='share'>邀请好友PK</button>
+    <button class="page-btn" bindtap="shareImage">发图晒一晒</button> -->
+
+  <button open-type='share' class='share_btn_tran'></button>
+
+  <image src='../../images/button_share_image.png' class='bottom_box_btn2_l' mode='aspectFit' bindtap='shareImage'></image>
+  <image src='../../images/button_pks.png' class='bottom_box_btn2_r' mode='aspectFit'></image>
+</view>

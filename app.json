@@ -1,0 +1,21 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/reqhelp/reqhelp",
+    "pages/result/result",
+    "pages/share/share",
+    "pages/help/help",
+    "pages/helpresult/helpresult",
+    "pages/rank/rank",
+    "pages/logs/logs",
+     "pages/count/count",
+     "pages/plugin/plugin"
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+     "navigationBarBackgroundColor": "#06254c",
+     "navigationBarTitleText": "24点算力评测",
+     "windowBackground": "#06254c",
+     "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,68 @@
+/* pages/helpresult/helpresult.wxss */
+
+.title-image {
+  margin: 20rpx;
+  width: 250rpx;
+  height: 200rpx;
+}
+
+.title-txt {
+  width: 100%;
+  flex: column;
+  display: block;
+  color: #4ace7d;
+  margin-bottom: 100rpx;
+  font-size: 36rpx;
+  text-align: center;
+}
+
+.result-exp {
+  width: 500rpx;
+  border: 1rpx solid gray;
+  height: 100rpx;
+  line-height: 100rpx;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: block;
+  background: white;
+  border-radius: 10rpx;
+  margin-bottom: 100rpx;
+  overflow: scroll;
+  color: #3e4a53;
+  font-size: 48rpx;
+}
+
+.equals24 {
+  color: #ce2c49;
+  font-size: 48rpx;
+}
+
+.bottom_box {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.bottom_box_btn2_l {
+  width: 290rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+
+.bottom_box_btn2_r {
+  width: 290rpx;
+  height: 100rpx;
+}
+
+.share_btn_tran {
+  background: transparent;
+  border: 0px solid transparent;
+  width: 290rpx;
+  height: 100rpx;
+  position: absolute;
+  border-radius: 50rpx;
+  right: 75rpx;
+  opacity: 0;
+}

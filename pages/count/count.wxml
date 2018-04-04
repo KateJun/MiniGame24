@@ -1,0 +1,69 @@
+<include src="../index/bg.wxml" />
+<view class="page-top">
+  <view class="score">
+    <view class="skip">算力：{{score.total}}</view>
+    <view class="fail" wx:if="{{second>=0}}">{{grade=='挑战模式'?'倒计时':'时间'}}：{{second}}</view>
+    <view class="skip">已完成：{{score.skipNum+score.failNum+score.successNum}}题</view>
+    <!-- <text class="win" wx:if="{{score.successNum>0}}">已经赢了{{score.successNum}}轮！</text>
+      <text class="fail" wx:if="{{score.failNum>0}}">错了{{score.failNum}}轮！</text> -->
+  </view>
+  <view class="playing" style='text-align:center'>
+    <view class="win_score">本题算力：{{dataBean.calcPow}} </view>
+    <view class="win_time">平均耗时：{{dataBean.averTime}}秒</view>
+  </view>
+
+  <view class="page-numbers">
+    <view class="{{disabled[index]?'card disabled':'card active'}}" wx:for="{{numbers}}" wx:key="key" bindtap="{{disabled[index]?'':'usetoCount'}}" disabled="{{disabled[index]}}" data-index="{{index}}" data-num="{{item}}" id="{{index}}">
+      <image class='card-bg' mode="aspectFit" src="../../images/img_num.png"></image>
+      <text class='card-text'> {{item}} </text>
+    </view>
+  </view>
+
+  <view class="result-box">
+    <text class="result-exp">{{exp==null?'(1+2+3)*4':exp}}</text>
+    <image class='result-ac' src='../../images/button-ac.png' mode='aspectFit' bindtap="reCount">AC</image>
+  </view>
+
+  <!-- <view class="page-btn-wrap">
+      <view class="operator" bindtap="useOperator" wx:for="{{['+','-','×','÷','(',')','=']}}" wx:key="key" data-operator="{{item}}">{{item}}</view>
+    </view> -->
+
+  <view class="page-btn-wrap">
+    <view class='opr-box'>
+      <view class='opr-box-line'>
+        <view class="operator" bindtap="useOperator" wx:for="{{['+','-','×']}}" wx:key="key" data-operator="{{item}}">{{item}}</view>
+      </view>
+      <view class='opr-box-line'>
+        <view class="operator" bindtap="useOperator" wx:for="{{['÷','(',')']}}" wx:key="key" data-operator="{{item}}">{{item}}</view>
+      </view>
+    </view>
+
+    <view class='equal-box'>
+      <image class="equal-box-end" src='../../images/button-equal.png' mode='aspectFit' bindtap="useOperator" wx:for="{{'='}}" wx:key="key" data-operator="{{item}}">
+        {{item}}
+      </image>
+    </view>
+  </view> 
+
+<view class="page-bottom">
+  <!-- <button class="page-btn" bindtap="reCount" wx:if="{{countLine[0].isCounted}}">算错了，重新开始</button> -->
+
+  <image src='../../images/button-jump.png' hidden="{{grade!='挑战模式'}}" mode='aspectFit' class="bottom_box_btn" bindtap="toSkip">跳过，下一题</image>
+
+  <image src='../../images/button-help.png' hidden="{{grade!='无尽模式'}}" mode='aspectFit' class="bottom_box_btn">算力不够？寻求好友解答</image>
+  <button open-type="share" hidden="{{grade!='无尽模式'}}" class="share_btn_tranl"></button>
+</view>
+</view>
+<!--mask-->
+<view class="dialog-mask" wx:if="{{showModalStatus}}"></view>
+<!-- dialog -->
+<view class="dialog-box" wx:if="{{showModalStatus}}">
+  <view class="dialog-content">
+    <image src='../../images/img-success.png' class='dialog-icon' mode='aspectFit'></image>
+  </view>
+  <view class="dialog-button-box"bindtap="clickDialog" data-statu="close" data-act='ok'>
+    下一题 
+    <!-- <image class='dialog-cancel' src='../../images/button-close.png' mode='aspectFit' bindtap='clickDialog' data-statu="close" data-act='cancel'></image>
+    <image class='dialog-ok' src='../../images/button-next.png' mode='aspectFit' bindtap='clickDialog' data-statu="close" data-act='ok'></image> -->
+  </view>
+</view>

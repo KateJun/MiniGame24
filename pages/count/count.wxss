@@ -1,0 +1,217 @@
+.page-top {
+  width: 750rpx;
+  height: auto;
+  z-index: 2;
+  position: fixed;
+}
+
+.score {
+  align-items: center;
+  padding: 50rpx 0 40rpx 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.win_score {
+  color: #3e4a53;
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.win_time {
+  color: #3e4a53;
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.playing {
+  font-size: 34rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.page-bottom {
+  margin-top: 50rpx;
+  z-index: 1;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  background: transparent;
+  justify-content: center;
+  display: flex;
+}
+
+.page-numbers {
+  /* position: absolute; *//* top: 200rpx; */
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
+.result-box {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.result-exp {
+  width: 80%;
+  border: 1rpx solid gray;
+  height: 100rpx;
+  justify-content: center;
+  border-radius: 10rpx;
+  display: block;
+  font-size: 48rpx;
+  color: #3e4a53;
+  background: white;
+  padding-left: 30rpx;
+  line-height: 100rpx;
+  overflow: scroll;
+  margin: 0 20rpx;
+}
+
+.result-ac {
+  width: 20%;
+  height: 102rpx;
+  color: white;
+  margin: 0 20rpx 0 0;
+}
+
+.number {
+  display: inline-block;
+  width: 70rpx;
+  margin: 10rpx;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.result-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 18;
+}
+
+.success {
+  color: red;
+}
+
+.fail {
+  color: #79caff;
+  background: white;
+  border-radius: 50rpx;
+  text-align: center;
+  width: 270rpx;
+  /* padding: 20rpx 0; */
+  height: 80rpx;
+  justify-content: center;
+  font-size: 32rpx;
+  border: 2rpx solid #79caff;
+  line-height: 80rpx;
+}
+
+.skip {
+  background: #79caff;
+  border-radius: 40rpx;
+  color: white;
+  width: 200rpx;
+  font-size: 24rpx;
+  height: 50rpx;
+  justify-content: center;
+  /* padding: 20rpx 0; */
+  text-align: center;
+  margin: 0 20rpx;
+  line-height: 50rpx;
+}
+
+.bottom_box_btn {
+  width: 600rpx;
+  height: 100rpx;
+  position: fixed;
+}
+
+.share_btn_tranl {
+  background: transparent;
+  border: 0 solid transparent;
+  width: 600rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  position: fixed;
+  opacity: 0;
+}
+
+/*mask*/
+
+.dialog-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.dialog_content {
+  /* height: 210px;  */
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+
+.dialog-box {
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  background: white;
+  margin: -170px 125rpx 0 125rpx;
+  border-radius: 10rpx;
+}
+
+.dialog-icon {
+  width: 500rpx;
+  height: 400rpx;
+  display: inline-block;
+}
+
+.dialog-button-box {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  justify-content: center;
+  border-top: 1px solid #269b50;
+  color: #269b50;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+}
+
+.dialog-cancel {
+  padding: 30rpx;
+  margin-right: 50rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.dialog-ok {
+  padding: 30rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.dialog-ok-tx {
+  padding: 10px;
+  font: 32rpx "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #269b50;
+  color: #269b50;
+}

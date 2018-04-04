@@ -1,0 +1,16 @@
+/* pages/share/share.wxss */
+page{
+  height: 100%;
+  position: absolute;
+}
+.score_canvas{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.containerc{
+  width: 100%;
+  height: 100%;
+}

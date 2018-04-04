@@ -1,0 +1,17 @@
+<template name="rankItem">
+  <view class='list_item' >
+  <view wx:if="{{ind ==1}}" class='list_item_top1_box' >
+    <image style='position:absolute' mode='widthFix' src='../../images/top1.png'  
+    class='list_item_top1'>{{ind}}</image>
+      <text class='list_item_top1_text'>{{ind}}</text>
+  </view>
+    <text wx:if="{{ind ==2}}" class='list_item_top2'>{{ind}}</text>
+    <text wx:if="{{ind ==3}}" class='list_item_top3'>{{ind}}</text>
+    <text wx:if="{{ind >3 }}" class='list_item_rank'>{{ind}}</text>
+    
+    <image class='list_icon' src="{{avatar_url ==null|| avatar_url.length==0?'../../images/avatar_default.png':avatar_url}}"></image>
+    <text class='list_text'>{{nick_name==null?'':nick_name}}</text>
+    <text class='list_text_end'>{{score}}</text>
+   
+  </view>
+</template>

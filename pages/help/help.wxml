@@ -1,0 +1,29 @@
+<!--pages/help/help.wxml-->
+
+
+<include src="../index/bg.wxml" />
+<view class='container'>
+  <view class='title-box'>
+    <image class="userhead" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <view class='title-box-text'>
+      <view class='title-box-text-name'>您的好友{{userInfo.nickName}}</view>
+      <view class='title-box-text-game'>帮您完成了计算</view>
+    </view>
+  </view>
+
+  <view class="page-numbers">
+    <view class="card active" wx:for="{{nums}}" wx:key="key" disabled="{{disabled[index]}}" data-index="{{index}}" data-num="{{item}}">
+      <image class='card-bg' mode="aspectFit" src="../../images/img_num.png"></image>
+      <text class='card-text'> {{item}} </text>
+    </view>
+  </view>
+
+  <view class='result-exp'>{{exp+' ='}}
+    <text class='equals24'>24</text>
+  </view>
+
+  <view class="bottom_box">
+    <!-- <button bindtap='testAgain'>再次评测</button> -->
+    <image src='../../images/button_test_again.png' class='bottom_box_btn' mode='aspectFit' bindtap='testAgain'></image>
+  </view>
+</view>

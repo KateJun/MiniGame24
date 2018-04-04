@@ -1,0 +1,171 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+  z-index: 100;
+  /* background: red; */
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.page-btn {
+  position: relative;
+  margin-bottom: 30rpx;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2rppx solid gray;
+  font-size: 32rpx;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  color: black;
+}
+
+.bottom-btn {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2.55555556;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: #000;
+  background-color: #f8f8f8;
+}
+
+/* 运算符box */
+
+.opr-box {
+  width: 80%;
+  height: 222rpx;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10rpx;
+  align-items: center;
+}
+
+/* 一行运算符 */
+
+.opr-box-line {
+  height: 100rpx;
+  display: flex;
+  margin-bottom: 20rpx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 运算符 */
+
+.operator {
+  background: white;
+  vertical-align: middle;
+  border: 1rpx solid gray;
+  text-align: center;
+  line-height: 98rpx;
+  height: 98rpx;
+  font-size: 60rpx;
+  margin: 0rpx 10rpx 10rpx 10rpx;
+  border-radius: 10rpx;
+  color: #3e4a53;
+  width: 30%;
+}
+
+.equal-box {
+  width: 20%;
+  height: 222rpx;
+  display: flex;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+  justify-content: center;
+}
+
+/* = */
+
+.equal-box-end {
+  height: 220rpx;
+  width: 100%;
+}
+
+.page-btn-wrap {
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 4个数字 */
+
+.page-numbers {
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card {
+  background: transparent;
+  text-align: center;
+  width: 150rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 250rpx;
+  margin: 0 20rpx;
+}
+
+.active {
+  opacity: 1;
+}
+
+.disabled {
+  opacity: 0.2;
+}
+
+.card-bg {
+  width: 150rpx;
+  height: 250rpx;
+  position: absolute;
+}
+
+.card-text {
+  color: #3e4a53;
+  font-size: 100rpx;
+  position: absolute;
+  font-weight: bold;
+  width: 150rpx;
+  text-align: center;
+  line-height: 250rpx;
+  height: 250rpx;
+}

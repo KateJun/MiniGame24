@@ -1,0 +1,26 @@
+<!--pages/helpresult/helpresult.wxml-->
+<include src="../index/bg.wxml" />
+<view class='container'>
+
+  <image class='title-image' src="../../images/img5.png" background-size="cover" mode='aspectFit' />
+  <!-- bindload='imageLoad' style="width:{{ images.width }}rpx; height:{{ images.height }}rpx;"></image> -->
+
+  <view class='title-txt'>
+    <view>恭喜，完成计算！</view>
+    <view>快点告诉TA吧！</view>
+  </view>
+
+  <view class='result-exp'>{{exp+' ='}}
+    <text class='equals24'>24</text>
+  </view>
+
+  <view class="bottom_box">
+    <!-- <button open-type='share'>告诉TA算法</button>
+    <button bindtap='testSelf'>评测自己的算力</button> -->
+
+    <button open-type='share' class='share_btn_tran'></button>
+
+    <image src='../../images/button_testselfs.png' class='bottom_box_btn2_l' mode='aspectFit' bindtap='testSelf' id='again'></image>
+    <image src='../../images/button_tell.png' class='bottom_box_btn2_r' mode='aspectFit' open-type='share'></image>
+  </view>
+</view>

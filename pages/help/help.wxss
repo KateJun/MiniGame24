@@ -1,0 +1,32 @@
+/* pages/help/help.wxss */
+@import "../reqhelp/reqhelp.wxss";
+
+.result-exp {
+  width: 600rpx;
+  border: 1rpx solid gray;
+  height: 100rpx;
+  line-height: 100rpx;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: block;
+  background: white;
+  border-radius: 10rpx;
+  margin-bottom: 100rpx;
+  overflow: scroll;
+  color: #3e4a53;
+  font-size: 48rpx;
+  margin: 50rpx 0 40rpx 0;
+  padding: 0;
+}
+
+.equals24 {
+  color: #ce2c49;
+  font-size: 48rpx;
+}
+
+.bottom_box {
+  margin: 20rpx auto;
+  width: 600rpx;
+  background: transparent;
+}

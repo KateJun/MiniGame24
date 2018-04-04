@@ -1,0 +1,5 @@
+<!--pages/share/share.wxml-->
+ 
+  <canvas  style='position:fixed' canvas-id='{{CANVAS_ID}}' class='score_canvas' bindlongtap='save'>
+  </canvas>
+ 

@@ -1,0 +1,53 @@
+<!--pages/reqhelp/reqhelp.wxml-->
+<include src="../index/bg.wxml" />
+<view class='title-box'>
+  <image class="userhead" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <view class='title-box-text'>
+    <view class='title-box-text-name'>{{userInfo.nickName}}正在玩</view>
+    <view class='title-box-text-game'>24点算力评测</view>
+  </view>
+</view>
+
+<view class="playing" style='text-align:center'>
+  <text class="skip">TA现在需要您的帮助，解答下面这题：</text>
+  <view class="win">本题算力：{{dataBean.calcPow}} </view>
+  <view class="skip">平均耗时：{{dataBean.averTime}}秒</view>
+</view>
+
+<view class="page-numbers">
+  <!-- <button class="{{disabled[index]?'card disabled':'card active'}}" wx:for="{{numbers}}" wx:key="key" bindtap="usetoCount" disabled="{{disabled[index]}}" data-index="{{index}}" data-num="{{item}}">
+    {{item}}
+  </button> -->
+
+  <view class="{{disabled[index]?'card disabled':'card active'}}" wx:for="{{numbers}}" wx:key="key" bindtap="{{disabled[index]?'':'usetoCount'}}" disabled="{{disabled[index]}}" data-index="{{index}}" data-num="{{item}}" id="{{index}}">
+    <image class='card-bg' mode="aspectFit" src="../../images/img_num.png"></image>
+    <text class='card-text'> {{item}} </text>
+  </view>
+</view>
+
+<view class="result-box">
+  <text class="result-exp">{{exp}}</text>
+  <image class='result-ac' src='../../images/button-ac.png' mode='aspectFit' bindtap="reCount">AC</image>
+</view>
+
+
+<view class="page-btn-wrap">
+  <view class='opr-box'>
+    <view class='opr-box-line'>
+      <view class="operator" bindtap="useOperator" wx:for="{{['+','-','×']}}" wx:key="key" data-operator="{{item}}">{{item}}</view>
+    </view>
+    <view class='opr-box-line'>
+      <view class="operator" bindtap="useOperator" wx:for="{{['÷','(',')']}}" wx:key="key" data-operator="{{item}}">{{item}}</view>
+    </view>
+  </view>
+  <view class='equal-box'>
+    <image class="equal-box-end" src='../../images/button-equal.png' mode='aspectFit' bindtap="useOperator" wx:for="{{'='}}" wx:key="key" data-operator="{{item}}">
+      {{item}}
+    </image>
+  </view>
+</view>
+
+<view class="page-bottom">
+  <!-- <button class='page-btn' bindtap='testSelf'>评测自己的算力</button> -->
+  <image src='../../images/button_testself.png' class='bottom_box_btn' mode='aspectFit' bindtap='testSelf'></image>
+</view>

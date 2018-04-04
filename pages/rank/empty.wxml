@@ -1,0 +1,8 @@
+<view class="container">
+  <image src="../../images/rank_empty_icon.png" class="icon_empty" mode="aspectFit"></image>
+
+  <text wx:if="{{myCalcPow >0}}" class='text_empty'>我的算力：{{myCalcPow}}\n这么厉害，为什么不跟好友比比呢？</text>
+  <text wx:if="{{myCalcPow <=0}}" class='text_empty'>还没有测试过你的算力</text>
+  <image class='btn_empty' id='empty' bindtap='clickBtn' src="{{myCalcPow > 0 ?'../../images/button_pk.png':'../../images/button_begin.png'}}" />
+  <button hidden="{{myCalcPow <= 0}}" open-type='share' class='share_btn_tranl'></button>
+</view>

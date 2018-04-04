@@ -1,0 +1,73 @@
+@import "../rank/rank.wxss";
+
+.congratulation {
+  text-align: center;
+  font-size: 48rpx;
+  color: #3e4a53;
+  padding: 160rpx 0 34rpx 0;
+  height: auto;
+}
+
+.time-end {
+  text-align: left;
+  font-size: 32rpx;
+  margin: 10rpx;
+}
+
+.score-box {
+  text-align: center;
+  font-size: 32rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+  color: #3e4a53;
+}
+
+.total {
+  font-size: 80rpx;
+  color: #61ada8;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 15rpx;
+  text-align: center;
+}
+
+.total-ti {
+  text-align: center;
+  font-size: 26rpx;
+  width: 100%;
+  color: #61ada8;
+  margin-bottom: 40rpx;
+}
+
+.total-end {
+  margin-bottom: 20rpx;
+  text-align: center;
+  font-size: 32rpx;
+  width: 100%;
+  color: #269b50;
+}
+
+.total-tips {
+  text-align: center;
+  font-size: 48rpx;
+  width: 100%;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+  color: #61ada8;
+}
+
+.canvas {
+  height: 200rpx;
+  width: 750rpx;
+  display: flex;
+}
+
+.bottom_box {
+  padding: 20rpx 0 40rpx 0;
+  display: flex;
+  width: 100%;
+  position: relative;
+  background: transparent;
+  bottom: 0rpx;
+  justify-content: center;
+}

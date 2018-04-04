@@ -1,0 +1,88 @@
+/**index.wxss**/
+
+.container {
+  display: inline;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome {
+  z-index: 3;
+  white-space: nowrap;
+  font-size: 26rpx;
+  color: #3e4a53;
+  top: 50rpx;
+  width: 100%;
+  height: 36rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.radio {
+  display: block;
+  align-items: center;
+  flex-direction: column;
+}
+
+.userhead {
+  align-items: center;
+  display: flex;
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx auto;
+  border-radius: 50%;
+  border: 2rpx solid white;
+}
+
+.logo {
+  width: 750rpx;
+  height: 215rpx;
+  display: inline-block;
+}
+
+.specification-box {
+  margin: 0 75rpx;
+  display: inline-block;
+  justify-content: center;
+}
+
+.specification-title {
+  width: 100%;
+  text-align: left;
+  padding-left: 70rpx;
+  display: flex;
+  font-size: 26rpx;
+  flex-direction: row;
+  color: black;
+  position: fixed;
+  bottom: 110rpx;
+}
+
+.specification {
+  font-size: 20rpx;
+  width: auto;
+  padding-left: 70rpx;
+  color: #8e6b5d;
+  padding-right: 70rpx;
+  display: block;
+  position: fixed;
+  bottom: 40rpx;
+  /* text-decoration:line-through; */
+}
+
+.grade-box {
+  margin: 30rpx 0 10rpx;
+}
+
+.label {
+  margin: 10rpx;
+}
+
+.image-btn {
+  /* position: relative; */
+  margin-bottom: 24rpx; 
+  display: inline-block;
+  width: 600rpx;
+  height: 132rpx;
+ 
+}
